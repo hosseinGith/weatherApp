@@ -1,0 +1,171 @@
+@font-face {
+    font-family: vazir;
+    src: url(../../vazir-font-v16.1.0/Vazir.ttf) format('truetype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    outline: 0;
+    font-family: vazir;
+    user-select: none;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+.ContainerBtnCity {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../imgs/defaultBackground.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.cityInfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    top: 40px;
+    position: absolute;
+    background-color: #ffffff9f;
+    border-radius: 1em;
+    width: 100%;
+    text-align: center;
+    max-width: 300px;
+    gap: 5px;
+    padding: 5px 20px;
+}
+
+.cityInfo.active {
+    height: 50px;
+}
+
+.animation {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    display: none;
+    right: 50%;
+    translate: 50%;
+    border: 5px solid #bb0d0d;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    animation: loadCityInfo .8s infinite;
+}
+.animation.active{
+    display: block;
+}
+
+@keyframes loadCityInfo {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.cityTitle {
+    display: none;
+    text-align: center;
+}
+
+.cityTitle.active{
+    display: block;
+}
+
+.cityInfo span {
+    display: none;
+}
+
+.cityInfo span.active {
+    display: inline;
+}
+
+.ContainerBtnCity>.setCity {
+    width: 80%;
+    height: 200px;
+    border-radius: 1em;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    background-color: #ffffff3a;
+}
+
+
+.ContainerBtnCity .setCity button {
+    background-color: #000000a6;
+    color: #fff;
+    border: 0;
+    border-radius: 1em;
+    padding: 6px 20px;
+    cursor: pointer;
+}
+
+.ContainerBtnCity .setCity button:active {
+    background-color: #00000054;
+}
+
+.ContainerBtnCity .setCity label {
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Error {
+    width: 90%;
+    padding: 0 10px;
+    top: -22px;
+    font-size: 13px;
+    border-radius: 1em;
+    display: none;
+    position: absolute;
+    background-color: rgba(250, 37, 37, 0.938);
+}
+
+.Error.active {
+    display: block;
+}
+
+.ContainerBtnCity .setCity label input {
+    width: 100%;
+    min-width: 150px;
+    border: 0;
+    border-radius: 1em;
+    padding: 6px 20px;
+}
+
+footer div {
+    background-color: #000000ef;
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    color: #d8d8d8fa;
+    bottom: 0;
+}
+
+footer div a {
+    color: #d8d8d8fa;
+}
+
+@media screen and (min-width:400px) {}
