@@ -111,7 +111,6 @@ async function btnClick() {
         for (let index = 0; index < spans.length; index++) {
             spans[index].classList.add('active')
         }
-    console.log(XHR.responseText);
 }
     if(XHR.status === 0){
         cityTitle.innerText = 'کشور یا شهر پیدا نشذ!!'
