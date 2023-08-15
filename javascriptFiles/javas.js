@@ -135,7 +135,7 @@ function main() {
             animation.classList.remove('active')
             descriptionInner.innerText = translateLetters(getCity)
             temp.innerText = `دما:` + Math.round(getCity.main.temp - 273)
-            wind_speed.innerText = `سرعت باد :` + getCity.wind.speed
+            wind_speed.innerText = `سرعت باد :` +  Math.round(getCity.wind.speed)
             for (let index = 0; index < spans.length; index++) {
                 spans[index].classList.add('active')
             }
