@@ -24,7 +24,7 @@ function main() {
 
     const XHR = new XMLHttpRequest()
 
-    let checkInputs = true
+    let checkInputs = false
 
     function setBackground(imgGround) {
         let mathimgs = Math.floor(Math.random() * 2)
