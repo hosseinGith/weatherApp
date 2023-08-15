@@ -20,6 +20,7 @@ const imgclearSky = ['imgs/BKGIMGClearSky.jpg', 'imgs/BKGIMGClearSky2.jpg',]
 const imgFogSky = ['imgs/BKGIMGFogSky.jpg', 'imgs/BKGIMGFogSky2.jpg']
 const imgRainSky = ['imgs/BKGIMGRainSky.jpg', 'imgs/BKGIMGRainSky2.jpg',]
 const imgFewClouds = ['imgs/BKGIMGFewCloudsSky.jpg', 'imgs/BKGIMGFewCloudsSky2.jpg',]
+const ImgScatteredClouds= ['imgs/BKGIMGScatteredCloudsSky.jpg', 'imgs/BKGIMGScatteredCloudsSky2.jpg',]
 
 
 const en = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm']
@@ -73,7 +74,11 @@ function translateLetters(getCity) {
         description = 'ابرهای شکسته'
         setBackground(imgFogSky)
         return description
-    } else {
+    }else if (getCity.weather[0].description === 'scattered clouds') {
+        description = 'ابرهای پراکنده'
+        setBackground(ImgScatteredClouds)
+        return description
+    }else {
         setBackground(imgclearSky)
         return getCity.weather[0].description
     }
